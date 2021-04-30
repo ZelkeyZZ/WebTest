@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ZKArts | AngularJS Activity</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">AngularJS Activity #1</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="eni.html" class="active">AngularJS Activity #1</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper" style="background-color:#4f1dc1;" ng-app='MsgApp'>
+						<div class="inner" ng-controller='MsgController'>
+							<h1 class="major">Expressions and Interpolation</h1>
+							<p style="text-align:center;">{{name}} seems to have a message for you : </p>
+							<p style="text-align:center;">{{sayMessage()}}</p>
+							<p style="text-align:center;"><button ng-click="pokeZelkey()">Poke Zelkey</button></p>
+							<p style="text-align:center;"><button ng-click="unpokeZelkey()">Don't Poke Zelkey</button></p>
+							<span class="image fit"><img src="images/Zelkey_{{stateOfBeing}}.png" /></span>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>Copyright &copy; ZelkeyZZ. All rights reserved.</li><li>Design & Template: <a href="#">ZKArts</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="https://code.angularjs.org/1.8.2/angular.js"></script>
+			<script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+			<script src="assets/js/app.js"></script>
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
