@@ -7,7 +7,7 @@
 	MsgController.$inject = ['$scope'];
 	function MsgController($scope){
 		$scope.name = "Zelkey";
-		$scope.stateOfBeing = "bored";
+		$scope.stateOfBeing = "boredaf";
 		
 		$scope.sayMessage = function(){
 			return "Poke Me because I'm bored and I have nothing to do!";
@@ -21,7 +21,7 @@
 		}
 		
 		$scope.unpokeZelkey = function(){
-			$scope.stateOfBeing = "bored";
+			$scope.stateOfBeing = "boredaf";
 			$scope.sayMessage = function(){
 				return "You're no fun.";
 			}
