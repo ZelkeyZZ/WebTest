@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ZKArts | AngularJS Activity</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload" ng-app='firsthird'>
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="title">ZKArts</a>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="src.html" class="active">Prog Activity #3</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<!-- Main -->
+			<section id="main" class="wrapper" style="background-color:#4f1dc1;">
+					<h1 class="major">Student Report Card</h1>
+				<form  name="form" novalidate>
+					<div class="login-wrap" ng-controller='MsgController'>
+						{{sayMessage()}}
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">
+									Fullname
+								</div>
+								<div class="row">
+									<div class="col-4">
+									<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" placeholder="Firstname" name="firstname" ng-model="firstname" >
+									</div>
+									<div class="col-4">
+									<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" placeholder="Middlename" name="middlename" ng-model="middlename" >
+									</div>
+									<div class="col-4">
+									<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" placeholder="Lastname" name="lastname" ng-model="lastname" >
+									</div>
+								</div>
+								<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" value="Your name is: {{firstname}} {{middlename}} {{lastname}}" disabled >
+							</div>
+						</div>
+						<br/>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">
+									School & Education
+								</div>
+								<div class="row">
+									<div class="col-4">
+									<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" placeholder="Course" name="course" ng-model="course" >
+									</div>
+									<div class="col-4">
+									<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" placeholder="Year Level" name="yearlevel" ng-model="yearlevel" >
+									</div>
+									<div class="col-4">
+									<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" placeholder="School" name="school" ng-model="school" >
+									</div>
+								</div>
+								<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" value="Your Course, Year Level and School are: {{course}} {{yearlevel}} {{school}}" disabled >
+							</div>
+						</div>
+						<br/>
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-addon">
+									Grades In Subjects
+								</div>
+								<table>
+									<tr>
+										<th>Learning Javascript 101 : <input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="number" name="subj1" ng-model="subj1"></th>
+									</tr>
+									<tr>
+										<th>Learning CSS 101 : <input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="number" name="subj2" ng-model="subj2"></th>
+									</tr>
+									<tr>
+										<th>Learning HTML 101 : <input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="number" name="subj3" ng-model="subj3"></th>
+									</tr>
+									<tr>
+										<th>Learning MySQL 101 : <input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="number" name="subj4" ng-model="subj4"></th>
+									</tr>
+									<tr>
+										<th>Learning PHP 101 : <input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="number" name="subj5" ng-model="subj5"></th>
+									</tr>
+									<tr>
+										<th>Learning Graphic Designing 101 : <input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="number" name="subj6" ng-model="subj6"></th>
+									</tr>
+									<tr>
+										<th>
+										
+										Grading : <input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" name="graderemark" ng-model="graderemark">
+										
+										</th>
+									</tr>
+								</table>
+								<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" value="Your Grades are: {{subj1}} {{subj2}} {{subj3}} {{subj4}} {{subj5}} {{subj6}}" disabled >
+								<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" value="Your Overall Grade is: {{(subj1 + subj2 + subj3 + subj4 + subj5 + subj6) / 6 | number : 2}} {{overall}}" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" disabled >
+								<input style="text-align:center; font-size:small; background-color:#2e2e2e;" type="text" value="Remarks: {{graderemark}}" disabled >
+							</div>
+						</div>
+					</div>
+				</form>
+				<br/>
+			</section>
+		</div>
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li>Copyright &copy; ZelkeyZZ. All rights reserved.</li><li>Design & Template: <a href="#">ZKArts</a></li>
+				</ul>
+			</div>
+		</footer>
+		<!-- Scripts -->
+		<script src="https://code.angularjs.org/1.8.2/angular.js"></script>
+		<script src="https://code.angularjs.org/1.8.2/angular.min.js"></script>
+		<script src="assets/js/test.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
